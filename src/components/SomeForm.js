@@ -8,7 +8,7 @@ const SomeForm = (props) => {
         inputChangeHandler: nameInputChangeHandler,
         inputLostFocusHandler: nameInputLostFocusHandler,
         resetValues: resetNameInputValues,
-    } = useInput(val => val.trim() !== "");
+    } = useInput((val) => val.trim() !== "");
 
     const {
         value: enteredEmail,
@@ -17,7 +17,7 @@ const SomeForm = (props) => {
         inputChangeHandler: emailInputChangeHandler,
         inputLostFocusHandler: emailInputLostFocusHandler,
         resetValues: resetEmailInputValues,
-    } = useInput(val => val.includes('@'));
+    } = useInput((val) => val.includes('@'));
 
     const {
         value: enteredsName,
@@ -26,7 +26,7 @@ const SomeForm = (props) => {
         inputChangeHandler: surnameInputChangeHandler,
         inputLostFocusHandler: surnameInputLostFocusHandler,
         resetValues: resetSurnameInputValues,
-    } = useInput(val => val.trim() !== "");
+    } = useInput((val) => val.trim() !== "");
 
     let isformValid = isEnteredNameValid && isEnteredSurnameValid && isEnteredEmailValid;
     console.log(isformValid);
